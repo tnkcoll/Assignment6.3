@@ -34,20 +34,20 @@
                 switch (option)
                 {
                     case 1:
-                        AddCall(callCenter);
+                        callCenter.Call(callCenter.GetCallCount());
                         Console.WriteLine();
                         break;
                     case 2:
-                        RemoveCall(callCenter);
+                        callCenter.Answer();
                         Console.WriteLine();
                         break;
                     case 3:
-                        GetCallsInQueue(callCenter);
+                        callCenter.DisplayCallCount();
                         Console.WriteLine();
                         break;
                     case 4:
                         Console.WriteLine();
-                        GetCallIdsInQueue(callCenter);
+                        callCenter.DisplayCallIds();
                         Console.WriteLine();
                         break;
                     case 5:
@@ -55,26 +55,6 @@
                         break;
                 }
             } while (exitProgram != true);
-        }
-
-        static void AddCall(CallCenter cc)
-        {
-            cc.Call(cc.GetCallCount());
-        }
-
-        static void RemoveCall(CallCenter cc)
-        {
-            cc.Answer();
-        }
-
-        static void GetCallsInQueue(CallCenter cc)
-        {
-            cc.DisplayCallCount();
-        }
-
-        static void GetCallIdsInQueue(CallCenter cc)
-        {
-            cc.DisplayCallIds();
         }
     }
 }

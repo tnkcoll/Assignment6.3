@@ -21,6 +21,11 @@ namespace Assignment6._3
 
         public IncomingCall Call(int Id)
         {
+            if (CallQueue.Count > 0)
+            {
+                return null;
+            }
+            
             IncomingCall call = new()
             {
                 CallId = ++counter
