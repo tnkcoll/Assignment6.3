@@ -17,7 +17,6 @@
 
             do
             {
-
                 do
                 {
                     Console.WriteLine("Please choose an option:");
